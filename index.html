@@ -54,7 +54,7 @@
       .baking-intro-picture {
         border-radius: 10px;
         transition: all 150ms ease-in-out;
-        aspect-ratio: 10/10;
+        width: 100%;
       }
       .baking-intro-picture:hover {
         filter: contrast(50%);
@@ -71,16 +71,41 @@
         border-radius: 5px;
         object-fit: cover;
       }
+      .grid img:hover {
+        transform: scale(1.5);
+      }
+
       footer {
         text-align: center;
         margin: 10px 0;
         font-size: 18px;
+        color: white;
+      }
+      footer a {
+        color: white;
+        text-decoration: none;
+      }
+      .read-link {
+        text-decoration: none;
+        color: blue;
+        margin-left: 225px;
+      }
+      .dark {
+        background: black;
+        color: white;
+      }
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark a {
+        color: blue;
+        text-decoration: none;
       }
     </style>
     <title>Baking - My hobby</title>
   </head>
   <body>
-    <button class="theme-button">Dark theme</button>
+    <button class="theme-button">Change theme</button>
     <div class="container">
       <h1>Baking</h1>
       <h2>My favorite hobby</h2>
@@ -103,13 +128,34 @@
         Linda Blair, “baking appeals to all five of the senses,” which in turn
         increases feel-good endorphins.
         <br /><br />
-        <a href="https://www.britannica.com/topic/baking">
+        <a
+          href="https://www.britannica.com/topic/baking"
+          class="read-link"
+          target="_blank"
+        >
           Read on Britannica
         </a>
       </p>
-
-      <button>Learn to bake</button>
     </div>
-    <footer>Coded by Samantha Volesky</footer>
+    <footer>
+      Coded by
+      <a href="https://github.com/sjvolesky" target="_blank"
+        >Samantha Volesky</a
+      >
+    </footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
   </body>
 </html>
