@@ -54,18 +54,22 @@
       .baking-intro-picture {
         border-radius: 10px;
         transition: all 150ms ease-in-out;
+        aspect-ratio: 10/10;
       }
       .baking-intro-picture:hover {
         filter: contrast(50%);
         transform: scale(1.1);
       }
       .grid {
+        margin: 15px 0;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 15px;
       }
       .grid img {
         width: 100%;
+        border-radius: 5px;
+        object-fit: cover;
       }
       footer {
         text-align: center;
@@ -81,12 +85,16 @@
       <h1>Baking</h1>
       <h2>My favorite hobby</h2>
       <a href="https://www.britannica.com/topic/baking" target="_blank">
-        <img src="images/macaron.JPG" alt="" class="baking-intro-picture"
+        <img
+          src="images/macaron.JPG"
+          alt=""
+          class="baking-intro-picture"
+          height="600"
       /></a>
       <div class="grid">
         <img src="images/Applepie.JPG" alt="" />
-        <img src="images/cinnimonroll.JPG" alt="" height="365" />
-        <img src="images/keylimepie.JPG" alt="" height="365" />
+        <img src="images/cinnimonroll.JPG" alt="" height="173" />
+        <img src="images/keylimepie.JPG" alt="" height="173" />
         <img src="images/weddingcake.JPG" alt="" />
       </div>
       <p>
