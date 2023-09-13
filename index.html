@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       body {
-        background-color: blue;
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(43, 199, 188) 0%,
+          rgb(219, 249, 203) 72.9%
+        );
       }
       h1 {
         text-align: center;
@@ -24,14 +28,13 @@
       button {
         display: block;
         margin: 0 auto;
-        border: 1px solid blue;
+        border: 1px solid black;
         font-size: 20px;
         border-radius: 6px;
         padding: 10px 15px;
         transition: all 150ms ease-in-out;
       }
       button:hover {
-        background: blue;
         cursor: pointer;
       }
       .container {
@@ -79,27 +82,42 @@
         text-align: center;
         margin: 10px 0;
         font-size: 18px;
-        color: white;
+        color: black;
       }
       footer a {
-        color: white;
+        color: black;
         text-decoration: none;
       }
       .read-link {
         text-decoration: none;
-        color: blue;
-        margin-left: 225px;
+        color: black;
+        margin-left: 230px;
       }
       .dark {
-        background: black;
+        background: linear-gradient(
+          112.1deg,
+          rgb(32, 38, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+        color: white;
+      }
+      .dark .theme-button {
+        background-color: white;
+        color: black;
+      }
+      .dark .theme-button:hover {
+        background-color: black;
         color: white;
       }
       .dark .container {
         background: rgba(255, 255, 255, 0.1);
       }
       .dark a {
-        color: blue;
+        color: white;
         text-decoration: none;
+      }
+      .dark footer {
+        color: white;
       }
     </style>
     <title>Baking - My hobby</title>
